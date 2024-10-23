@@ -2,9 +2,8 @@ var http = require('http');
 var url = require('url');
 var echarts = require('echarts');
 const { createCanvas } = require('canvas');
-const args = process.argv;
 
-const port = args.port || 3000;
+const port = process.env.PORT || 3000;
 
 echarts.setPlatformAPI({
   // Same with the old setCanvasCreator
