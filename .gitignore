@@ -6,12 +6,6 @@ yarn-debug.log*
 yarn-error.log*
 lerna-debug.log*
 
-# IntelliJ IDEA
-.idea
-*.iml
-*.ipr
-*.iws
-
 # Runtime data
 pids
 *.pid
