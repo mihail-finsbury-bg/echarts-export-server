@@ -76,6 +76,17 @@ function renderChart(config) {
 
 http
   .createServer(function (req, res) {
+    const { method, url } = req;
+    if (method === 'GET' && url === '/heartbeat') {
+      res.end(
+        JSON.stringify({
+          message: 'OK',
+          timestamp: Date.now(),
+        })
+      );
+      return;
+    }
+
     res.setHeader('Access-Control-Allow-Origin', '*');
     res.setHeader('Content-Type', 'application/json;charset=UTF-8');
     processConfig(req, res, function () {
