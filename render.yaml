@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: echarts-export-server
+    runtime: node
+    repo: https://github.com/mihail-finsbury-bg/echarts-export-server
+    plan: free
+    region: frankfurt
+    buildCommand: npm install
+    startCommand: npm run foreground
+    healthCheckPath: /heartbeat
+version: '1'
